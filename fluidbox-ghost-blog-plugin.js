@@ -55,6 +55,7 @@ window.fluidboxGhost = $.when(
         let imgSrc = $img.attr('src');
         let newRule = 'background-image: url("' + imgSrc + '") !important;';
         document.styleSheets[0].insertRule(".fluidbox__overlay::before{"+ newRule + "}", document.styleSheets[0].cssRules.length);
+        document.styleSheets[0].insertRule(".fluidbox__ghost::before{ position: fixed !important; top:50% !important; left:50% !important; }", document.styleSheets[0].cssRules.length);
       }
     }).on('openend.fluidbox', function() {
       activeImage = this;
